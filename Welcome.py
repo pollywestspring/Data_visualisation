@@ -9,7 +9,7 @@ for i in os.listdir(): #select every csv file in my directory
 
 st.write('Hello world of visualisation')
 
-st.selectbox('select location', file_name_list, file_name_list[0])
+st.selectbox('select location', file_name_list)
 df=pd.read_csv(file_name_list)
 st.dataframe(df)
 
