@@ -24,7 +24,7 @@ x = st.selectbox('select element', el_list)
 y = st.selectbox('select element', el_list)
 
 p = figure(
-    title='simple line example',
+    title='example from file',
     x_axis_label='x',
     y_axis_label='y')
 
