@@ -17,7 +17,7 @@ el_list=df.columns.tolist()[27:80]
 
 x = st.selectbox('select element', el_list)
 y = st.selectbox('select element2', el_list)
-mean_line = (df[el_y].mean()/10000, color='g')
+mean_line = (df[el_y].mean(), color='g')
 
 from bokeh.plotting import figure
 
