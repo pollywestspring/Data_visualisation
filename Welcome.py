@@ -17,13 +17,15 @@ el_list=df.columns.tolist()[27:80]
 
 x = st.selectbox('select element', el_list)
 y = st.selectbox('select element2', el_list)
+mean_line = (df[el_y].mean()/10000, color='g')
 
 from bokeh.plotting import figure
 
 p = figure(
     title='example from file',
     x_axis_label='x',
-    y_axis_label='y')
+    y_axis_label='y',
+    mean_line)
 
 p.circle(df[x], df[y])
 
