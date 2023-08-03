@@ -21,7 +21,7 @@ st.multiselect('select location', file_name_list, file_name_list[0])
 from bokeh.plotting import figure
 
 x = st.selectbox('select element', el_list)
-y = st.selectbox('select element', el_list)
+y = st.selectbox('select element2', el_list)
 
 p = figure(
     title='example from file',
