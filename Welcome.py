@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import os
 
+
 file_name_list=[]
 for i in os.listdir(): #select every csv file in my directory
   if i.endswith('csv'):
@@ -17,7 +18,7 @@ el_list=df.columns.tolist()[27:80]
 
 x = st.selectbox('select element', el_list)
 y = st.selectbox('select element2', el_list)
-mean_line = (df[el_y].mean())
+mean_line = (df[y].mean())
 
 from bokeh.plotting import figure
 
