@@ -4,7 +4,7 @@ import os
 
 file_name_list=[]
 for i in os.listdir(): #select every csv file in my directory
-  if i.endswith('csv):
+  if i.endswith('csv'):
                 file_name_list.append(i)
 
 st.write('Hello world')
