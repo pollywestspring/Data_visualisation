@@ -9,19 +9,16 @@ for i in os.listdir(): #select every csv file in my directory
 
 st.write('Hello world of visualisation')
 
-df=pd.read_csv('Bastar Craton.csv')
+st.multiselect('select location', file_name_list, file_name_list)
+df=pd.read_csv(file_name_list)
 st.dataframe(df)
 
 el_list=df.columns.tolist()[27:80]
-x_axis=st.selectbox('select element', el_list)
-
-st.multiselect('select location', file_name_list, file_name_list[0])
-
-
-from bokeh.plotting import figure
 
 x = st.selectbox('select element', el_list)
 y = st.selectbox('select element2', el_list)
+
+from bokeh.plotting import figure
 
 p = figure(
     title='example from file',
