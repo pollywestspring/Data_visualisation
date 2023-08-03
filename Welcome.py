@@ -9,8 +9,8 @@ for i in os.listdir(): #select every csv file in my directory
 
 st.write('Hello world of visualisation')
 
-st.selectbox('select location', file_name_list)
-df=pd.read_csv(file_name_list)
+selection = st.selectbox('select location', file_name_list)
+df=pd.read_csv(selection)
 st.dataframe(df)
 
 el_list=df.columns.tolist()[27:80]
